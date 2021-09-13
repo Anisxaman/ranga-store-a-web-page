@@ -6,7 +6,7 @@ const loadProducts = () => {
 };
 loadProducts();
 
-// show all product in UI 
+//--------------------------------------- show all product in UI -------------------------------------
 const showProducts = (products) => {
 
   console.log(products);
@@ -71,13 +71,13 @@ const updatePrice = (id, value) => {
   updateTotal();
 };
 
-// set innerText function
+// -----------------------------------set innerText function---------------------------------------
 const setInnerText = (id, value) => {
   // document.getElementById(id).innerText = Math.round(value);
   document.getElementById(id).innerText =value.toFixed(2);
 };
 
-// update delivery charge and total Tax
+//------------------------------ update delivery charge and total Tax-------------------------------
 const updateTaxAndCharge = () => {
   const priceConverted = getInputValue("price");
   if (priceConverted > 200) {
@@ -95,11 +95,8 @@ const updateTaxAndCharge = () => {
   updateTotal();
 };
 
-//grandTotal update function
-const updateTotal = () => {
 
-  // const price=document.getElementById("price").value;
-  // console.log(price);
+const updateTotal = () => {
 
   const grandTotal = getInputValue("price") + getInputValue("delivery-charge")+getInputValue("total-tax");
     console.log(grandTotal);
