@@ -17,11 +17,11 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product p-2 rounded-3 me-3 mt-4" style="height:600px; background:#fbfcfd;"  >
-      <div>
-    <img class="product-image img-fluid" src=${image}></img>
+      <div class="product-image text-center mx-auto" style="height: 200px;">
+    <img height="200px" width="150px" src=${image}></img>
       </div>
-      <div>
-      <div>
+      <div >
+      <div class="mt-4">
         <h4 class="mt-3">${product.title} </h4>
         <p class="mt-2 "><span class="fw-bold">Category:</span> men's clothing</p>
         <br>
