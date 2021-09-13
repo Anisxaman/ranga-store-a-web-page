@@ -22,12 +22,11 @@ const showProducts = (products) => {
       </div>
       <div>
       <div>
-        <h4 class="mt-3">Mens Casual Premium Slim Fit T-Shirts </h4>
+        <h4 class="mt-3">${product.title} </h4>
         <p class="mt-2 "><span class="fw-bold">Category:</span> men's clothing</p>
         <br>
         <h2><span class="text-danger">Price:</span> $ 22.3</h2>
        </div>
-
         <div class="d-flex justify-content-between mt-2 mb-2 ps-3 pe-3">
           <h5 class="mt-3"><span class="text-danger">Rating:</span>${product.rating.rate}</h5>
           <h5 class="mt-3"><span class="text-danger">Rating count:</span>${product.rating.count}</h5>
@@ -36,8 +35,14 @@ const showProducts = (products) => {
     
         </div>
     </div>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+    <div class="d-flex justify-content-between mt-2 mb-2 ps-3 pe-3">
+    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
+    <button id="details-btn" class="btn btn-danger">Details</button></div>
+
+   
+
+  </div>
+    
       `;
     document.getElementById("all-products").appendChild(div);
   }
