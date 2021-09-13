@@ -25,7 +25,7 @@ const showProducts = (products) => {
         <h4 class="mt-3">${product.title} </h4>
         <p class="mt-2 "><span class="fw-bold">Category:</span> men's clothing</p>
         <br>
-        <h2><span class="text-danger">Price:</span> $ 22.3</h2>
+        <h2><span class="text-danger">Price:</span>${product.price}</h2>
        </div>
         <div class="d-flex justify-content-between mt-2 mb-2 ps-3 pe-3">
           <h5 class="mt-3"><span class="text-danger">Rating:</span>${product.rating.rate}</h5>
@@ -36,8 +36,8 @@ const showProducts = (products) => {
         </div>
     </div>
     <div class="d-flex justify-content-between mt-2 mb-2 ps-3 pe-3">
-    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
-    <button id="details-btn" class="btn btn-danger">Details</button></div>
+    <button  onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary rounded-3">add to cart</button>
+    <button id="details-btn" class="btn btn-danger rounded-3">Details</button></div>
 
    
 
