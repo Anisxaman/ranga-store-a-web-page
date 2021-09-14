@@ -23,17 +23,24 @@ const showProducts = (products) => {
       <div >
       <div class="mt-4">
         <h4 class="mt-3">${product.title} </h4>
-        <p class="mt-2 "><span class="fw-bold">Category:</span> men's clothing</p>
+        <p class="mt-2 "><span class="fw-bold">Category:</span> ${product.category} </p>
         <br>
         <h2><span class="text-danger">Price:</span>${product.price}</h2>
        </div>
         <div class="d-flex justify-content-between mt-2 mb-2 ps-3 pe-3">
           <h5 class="mt-3"><span class="text-danger">Rating:</span>${product.rating.rate}</h5>
           <h5 class="mt-3"><span class="text-danger">Rating count:</span>${product.rating.count}</h5>
-    
-         
-    
+               
         </div>
+        <span class="star text-info">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                
+        </span>
+   
     </div>
     <div class="d-flex justify-content-between mt-2 mb-2 ps-3 pe-3">
     <button  onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary rounded-3">add to cart</button>
@@ -56,13 +63,14 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
+// ---------------------------------covert float function------------------------------
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
   return converted;
 };
 
-// main price update function
+//------------------------------------ main price update function--------------------------
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
