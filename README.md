@@ -10,4 +10,4 @@
 
 ## Site link:
 
-https://anisxaman.github.io/Glowing-animtion/
+https://anisxaman.github.io/ranga-store-a-web-page/
